@@ -12,7 +12,7 @@ constexpr char PI_1BILLION_DIGITS_FILE_PATH[] = "PI-1BILLION-DIGITS.txt";
 constexpr char LAST_66_DIGITS[] = "947757350076080576622871044045130245603581915324606712030765715945";
 
 
-uint64_t indexOf(const std::vector<char>& pi_digits, const std::string& search)
+int64_t indexOf(const std::vector<char>& pi_digits, const std::string& search)
 {
 	char start = search[0];
 	for (uint64_t i = 0; i < pi_digits.size(); i++)
@@ -81,7 +81,7 @@ int main(void)
 			cout << "Enter digits to search for: \n";
 			getline(cin, search);
 			auto t1 = high_resolution_clock::now();
-			uint64_t index = indexOf(digits, search);
+			int64_t index = indexOf(digits, search);
 			if (index != -1)
 			{
 				cout << "Found match at index " << index << endl;
